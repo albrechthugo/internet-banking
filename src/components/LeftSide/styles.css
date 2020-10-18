@@ -1,0 +1,114 @@
+#left-side__container {
+  grid-area: leftSide;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-gray);
+  overflow-y: scroll;
+}
+
+#left-side__container::-webkit-scrollbar {
+  display: none;
+}
+
+#left-side__container header {
+  width: 100%;
+  height: 17rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--gray);
+}
+
+#left-side__container header .left-side__title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+#left-side__container header .left-side__title p {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  letter-spacing: -0.8px;
+  margin-left: -6rem;
+}
+
+#left-side__container header .left-side__title p strong {
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+
+#left-side__container header .left-side__balance {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#left-side__container header .left-side__balance .eye-icon {
+  margin-left: -20px;
+}
+
+#left-side__container header .left-side__balance span {
+  color: var(--text-gray);
+  font-size: 1.4rem;
+}
+
+#left-side__container header .left-side__balance span strong {
+  font-size: 2.2rem;
+}
+
+#left-side__container main {
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+}
+
+#left-side__container main strong {
+  margin-left: 1rem;
+  margin-bottom: 0.6rem;
+  margin-top: 3rem;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+#left-side__container footer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+#left-side__container footer .left-side__profile.info {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  justify-content: space-evenly;
+
+  background-color: #E8E8E8;
+}
+
+#left-side__container footer .left-side__profile.info .left-side__bank.data p:first-of-type {
+  font-size: 1.4rem;
+}
+
+#left-side__container footer .left-side__profile.info .left-side__bank.data p {
+  font-size: 1.2rem;
+}
+
+#left-side__container footer .left-side__profile.info .left-side__bank.data p strong {
+  font-size: 1.3rem;
+  margin-left: 0.5rem;
+}
