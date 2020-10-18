@@ -1,0 +1,19 @@
+.login__form .login__form.content .login__form.email {
+  max-width: 35rem;
+  height: 7.4rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0rem;
+  margin-bottom: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border: 1px solid var(--gray);
+  border-radius: 13px;
+}
+
+.login__form .login__form.content .login__form.email label {
+  color: var(--gray);
+  margin-top: -1rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.15rem;
+}
