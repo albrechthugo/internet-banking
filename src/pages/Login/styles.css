@@ -1,0 +1,138 @@
+#login__container {
+  width: 100%;
+  height: 100%;
+}
+
+#login__container main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+#login__container main .login__hero.image {
+  width: 50%;
+  height: 100%;
+  background-image: url('../../assets/login.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#login__container main .login__content {
+  width: 50%;
+  display: flex;
+}
+
+#login__container main .login__content .login__form {
+  width: 38rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#login__container main .login__content .login__form .login__form.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login__form .login__form.content .login__form.description {
+  display: flex;
+  margin-top: 2.2rem;
+  margin-bottom: 4.2rem;
+  align-items: center;
+  text-align: center;
+}
+
+.login__form .login__form.content .login__form.description p {
+  font-size: 2.8rem;
+  line-height: 3rem;
+  font-weight: 300;
+  letter-spacing: -1px;
+}
+
+.login__form .login__form.content .login__form.description span {
+  margin-top: 2rem;
+  font-size: 1.28rem;
+  font-weight: 300;
+}
+
+.login__form .login__form.content a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.login__form .login__form.content .login__form.forget-password {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: underline;
+  color: var(--purple);
+  margin-top: 3rem;
+}
+
+.login__form .login__form.content a .login__form.submit-button {
+  max-width: 35rem;
+  height: 4.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 8px;
+  background-color: var(--purple);
+
+  transition: all 0.2s;
+}
+
+.login__form .login__form.content a .login__form.submit-button:hover {
+  background-color: var(--light-purple);
+  box-shadow: 0.1px 0.1px 3pxvar(--gray);
+}
+
+.login__form .login__form.content a .login__form.submit-button p {
+  color: var(--white);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.login__form .login__footer {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+  margin-top: 5rem;
+  padding-top: 2.2rem;
+  border-top: 1px solid var(--gray);
+}
+
+.login__form .login__footer p {
+  font-size: 1.18rem;
+}
+
+.login__form .login__footer a {
+  display: flex;
+  align-self: flex-end;
+  font-size: 1.18rem;
+  text-decoration: none;
+  color: var(--purple);
+}
+
+@media (max-width: 980px) {
+  #login__container main .login__hero.image {
+    display: none;
+  }
+
+  #login__container main .login__content {
+    width: 100%;
+    display: flex;
+  }
+}
+
+@media (max-width: 355px) {
+  #login__container main .login__content .login__form .login__form.content {
+    padding-top: 10rem;
+  }
+}
