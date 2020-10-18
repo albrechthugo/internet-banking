@@ -1,0 +1,23 @@
+.left-side__option {
+  width: 80%;
+  height: 3.2rem;
+  display: flex;
+  margin-bottom: 0.2rem;
+  padding-left: 1rem;
+  align-items: center;
+  border-radius: 2rem;
+  cursor: pointer;
+
+  transition: background 0.3s;
+}
+
+.left-side__option:hover {
+  background-color: var(--white);
+}
+
+.left-side__option p {
+  margin-left: 0.7rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: left;
+}
