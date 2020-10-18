@@ -1,0 +1,7 @@
+.left-side__separator {
+    position: absolute;
+    left: 0;
+    top: 30.4rem;
+    width: 280px;
+    border-bottom: 1px solid var(--gray);
+}
