@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles.css';
 
@@ -9,7 +10,7 @@ import * as Icon from 'react-feather';
 import Options from '../../components/Options';
 import Separator from '../../components/Separator';
 
-const LeftSide = () => {
+const LeftSide = (props) => {  
   return (
       <div id="left-side__container">
         <header>
@@ -27,7 +28,7 @@ const LeftSide = () => {
           <div className="left-side__balance">
             <span>
               Saldo da Conta <br/>
-              <strong>R$26.500,20</strong>
+              <strong>R$ {props.saldo}</strong>
             </span>
             <Icon.EyeOff
               size={20}
@@ -37,66 +38,77 @@ const LeftSide = () => {
         </header>
 
         <main>
+          <Link to="/dashboard/">
+            <Options 
+              text="Início" 
+              icon={<Icon.Home size={20}/>}
+            />
+          </Link>
+          
+          <Options 
+            text="Depositar" 
+            icon={<Icon.ArrowDown size={20}/>}
+          />
 
-          <div className="left-side__option">
-            <Icon.Home size={18}/>
-            <Options text="Início"/>
-          </div>
-          <div className="left-side__option">
-            <Icon.ArrowDown size={18}/>
-            <Options text="Depositar"/>
-          </div>
-          <div className="left-side__option">
-            <Icon.FileText size={18}/>
-            <Options text="Extrato da conta"/>
-          </div>
-          <div className="left-side__option">
-            <Icon.CreditCard size={18}/>
-            <Options text="Cartões"/>
-          </div>
-          <div className="left-side__option">
-            <Icon.DollarSign size={18}/>
-            <Options text="Emitir cobrança"/>
-          </div>
-          <div className="left-side__option">
-            <Icon.BarChart size={18}/>
-            <Options text="Gestão de cobrança"/>
-          </div>
-          <div className="left-side__option">
-            <Icon.Share size={18}/>
-            <Options text="Transfêrencia"/>
-          </div>
-          <div className="left-side__option">
-            <FaMoneyCheck size={18}/>
-            <Options text="Pagamentos"/>
-          </div>
+          <Link to="/dashboard/details/">
+            <Options 
+              text="Extrato da conta" 
+              icon={<Icon.FileText size={20}/>}
+            />
+          </Link>
+          
+          <Link to="/dashboard/cards/">
+            <Options 
+              text="Cartões" 
+              icon={<Icon.CreditCard size={20}/>}
+            />
+          </Link>
+          
+          <Options 
+            text="Emitir cobrança" 
+            icon={<Icon.DollarSign size={20}/>}
+          />
+
+          <Options 
+            text="Gestão de cobrança" 
+            icon={<Icon.BarChart size={20}/>}
+          />
+
+          <Options 
+            text="Transfêrencia" 
+            icon={<Icon.Share size={20}/>}
+          />
+
+          <Options 
+            text="Pagamentos" 
+            icon={<FaMoneyCheck size={20}/>}
+          />
 
           <Separator />
 
           <strong>
               Mais opções
             </strong>
-
-            <div className="left-side__option">
-              <Icon.Calendar size={18}/>
-              <Options text="Agendamentos"/>
-            </div>
-            <div className="left-side__option">
-              <Icon.FileText size={18}/>
-              <Options text="Comprovantes"/>
-            </div>
-            <div className="left-side__option">
-              <Icon.Percent size={18}/>
-              <Options text="Tarifas"/>
-            </div>
-            <div className="left-side__option">
-              <Icon.PhoneCall size={18}/>
-              <Options text="Fale conosco"/>
-            </div>
-            <div className="left-side__option">
-              <Icon.Award size={18}/>
-              <Options text="Benefícios"/>
-            </div>
+              <Options 
+                text="Agendamentos" 
+                icon={<Icon.Calendar size={20}/>}
+              />
+              <Options 
+                text="Comprovantes" 
+                icon={<Icon.FileText size={20}/>}
+              />
+              <Options 
+                text="Tarifas" 
+                icon={<Icon.Percent size={20}/>}
+              />
+              <Options 
+                text="Fale conosco" 
+                icon={<Icon.PhoneCall size={20}/>}
+              />
+              <Options 
+                text="Benefícios" 
+                icon={<Icon.Award size={20}/>}
+              />
 
         </main>
 
@@ -111,13 +123,13 @@ const LeftSide = () => {
 
               <p>Agência 
                 <strong>
-                  0001
+                  {props.agencia}
                 </strong>
               </p>
 
               <p>Conta 
                 <strong>
-                  12356-9
+                  {props.conta}-{props.digito}
                 </strong>
               </p>
             </div>

@@ -1,94 +1,54 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+import api from '../../services/api';
 
 import './styles.css';
 
-import { 
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend
-} from 'recharts';
-
 import LeftSide from '../../components/LeftSide';
+import Header from '../../components/Header';
 import RightSide from '../../components/RightSide';
+import Graphic from '../../components/Graphic';
 
 const Dashboard = () => {
-  const data = [
-    {
-      name: 'Transação 1',
-      Entrada: 10500,
-      Saída: 2600
-    },
-    {
-      name: 'Transação 2',
-      Entrada: 0,
-      Saída: 2600
-    },
-    {
-      name: 'Transação 3',
-      Entrada: 0,
-      Saída: 2600
-    },
-    {
-      name: 'Transação 4',
-      Entrada: 10500,
-      Saída: 2600
-    },
-    {
-      name: 'Transação 5',
-      Entrada: 0,
-      Saída: 2600
-    },
-    {
-      name: 'Transação 6',
-      Entrada: 0,
-      Saída: 2600
-    }
-  ];
+  const idEmpresa = localStorage.getItem('id');
+
+  const [nome, setNome] = useState('');
+  const [cnpj, setCnpj] = useState('');
+  const [saldo, setSaldo] = useState('');
+  const [agencia, setAgencia] = useState('');
+  const [conta, setConta] = useState('');
+  const [digito, setDigito] = useState('');
+
+  useEffect(() => {
+    api.get(`/empresas/?id=${idEmpresa}`).then(response => {
+      const data = response.data[0];
+      
+      setNome(data.nomeEmpresa);
+      setCnpj(data.cnpj);
+      setSaldo(data.saldo);
+      setAgencia(data.dadosBancario.agencia);
+      setConta(data.dadosBancario.conta);
+      setDigito(data.dadosBancario.digitoConta);
+    })
+  }, []);
 
   return (
     <div id="dashboard__container">
-      <LeftSide />
+      <LeftSide 
+        saldo={saldo}
+        agencia={agencia}
+        conta={conta}
+        digito={digito}
+      />
 
       <main className="dashboard__main">
-        <header>
-          <strong>
-            Bem-vindo, <p>Hugo Andreas Albrecht</p>
-          </strong>
-
-          <span>
-            CNPJ: 123453400XX
-          </span>
-        </header>
-
+        <Header 
+          nome={nome}
+          cnpj={cnpj}
+        />
+      
         <section>
-          <h1>
-            Movimentação da conta
-          </h1>
-
-          <BarChart 
-            width={600} 
-            height={300} 
-            data={data}
-            className="dashboard__graphic"
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Bar 
-              dataKey="Entrada" 
-              fill="#04D361" 
-            />
-            <Bar 
-              dataKey="Saída" 
-              fill="#f22" 
-            />
-          </BarChart>
+          <Graphic />
         </section>
 
         <footer>
@@ -104,6 +64,7 @@ const Dashboard = () => {
             Trabalhe Conosco
           </a>
         </footer>
+      
       </main>
 
       <RightSide />

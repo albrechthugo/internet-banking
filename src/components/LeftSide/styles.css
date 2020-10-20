@@ -5,10 +5,14 @@
   flex-direction: column;
   background-color: var(--light-gray);
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 #left-side__container::-webkit-scrollbar {
-  display: none;
+  width: 10px;
+  background-color: var(--gray);
+  background-clip: padding-box;
+  border-radius: 10px
 }
 
 #left-side__container header {
