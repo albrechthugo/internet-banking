@@ -52,15 +52,27 @@ const Dashboard = () => {
         </section>
 
         <footer>
-          <a href="">
+          <a 
+            target="_blank"
+            rel="noopener norefeer"
+            href="https://contasimples.com/"
+          >
             Política de Privacidade
           </a>
 
-          <a href="">
+          <a 
+            target="_blank"
+            rel="noopener norefeer"
+            href="https://contasimples.com/"
+          >
             Saiba mais sobre segurança
           </a>
           
-          <a href="">
+          <a 
+            target="_blank"
+            rel="noopener norefeer"
+            href="https://contasimples.com/"
+          >
             Trabalhe Conosco
           </a>
         </footer>
