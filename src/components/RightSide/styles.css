@@ -1,0 +1,49 @@
+#right-side__container {
+  width: 100%;
+  height: 100%;
+  grid-area: rightSide;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: var(--light-gray);
+}
+
+#right-side__container span {
+  font-size: 1.4rem;
+  font-weight: 500;
+  opacity: 70%;
+  text-transform: uppercase;
+}
+
+#right-side__container .right-side__link {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--light-purple);
+  text-align: center;
+  margin-top: 1.2rem;
+}
+
+#right-side__container .right-side__transation.container {
+  display: flex;
+  flex-direction: column;
+}
+
+#right-side__container .right-side__transation.container .right-side__transation:first-child {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+#right-side__container .right-side__transation.container .right-side__transation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+#right-side__container .right-side__transation.container .right-side__transation p, .right-side__value {
+  font-size: 1.2rem;
+}

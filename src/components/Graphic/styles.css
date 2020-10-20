@@ -1,0 +1,18 @@
+.graphic__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.graphic__wrapper h1 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  opacity: 60%;
+}
+
+.graphic__wrapper .dashboard__graphic {
+  margin-top: 2rem;
+}

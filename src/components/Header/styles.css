@@ -1,0 +1,24 @@
+.header__container {
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+  padding-left: 3rem;
+  border-bottom: 1px solid var(--gray);
+}
+  
+.header__container strong {
+  font-size: 2.6rem;
+  display: flex;
+  align-items: center;
+}
+  
+.header__container strong p {
+  font-weight: 400;
+  margin-left: 1rem;
+}
+  
+.header__container span {
+  font-size: 1.7rem;
+  font-weight: 300;
+}

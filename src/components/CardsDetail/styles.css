@@ -1,0 +1,53 @@
+.cards__detail.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.cards__detail.container h1 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  opacity: 60%;
+}
+
+.cards__detail.container .cards__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.7rem;
+}
+
+.cards__detail.container .cards__wrapper.card.detail {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards__detail.container .cards__wrapper.card.detail table {
+  width: 100%;
+  margin-bottom: 4rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.cards__detail.container .cards__wrapper.card.detail table, th, td {
+  border-collapse: collapse;
+  border: 1px solid var(--light-gray);
+}
+
+.cards__detail.container .cards__wrapper.card.detail .card.info {
+  text-transform: uppercase;
+  height: 6rem;
+  background-image: linear-gradient(to top, #DEE4EA 0%, #F9FCFF 74%);
+}
+
+.cards__detail.container .cards__wrapper.card.detail .transation.header {
+  height: 4rem;
+}
+
+.cards__detail.container .cards__wrapper.card.detail .transation.info {
+  height: 3rem;
+}

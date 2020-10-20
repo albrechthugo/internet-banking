@@ -1,0 +1,66 @@
+.extract__container.a {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.extract__container.a .extract__title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.extract__container.a .extract__title h1 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  opacity: 60%;
+}
+
+ .extract__container.a .extract__title.filter {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+ .extract__container.a .extract__title.filter span, strong {
+  font-size: 1.2rem;
+}
+
+.extract__container.a .extract__title.filter strong {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.extract__container.a .extract__wrapper {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.extract__container.a .extract__wrapper table {
+  width: 100%;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.extract__container.a .extract__wrapper table, th, td {
+  border-collapse: collapse;
+  border: 1px solid var(--light-gray)
+}
+
+.extract__container.a .extract__wrapper th {
+  height: 6rem;
+  background-image: linear-gradient(to top, #DEE4EA 0%, #F9FCFF 74%);
+}
+
+.extract__container.a .extract__wrapper td {
+  height: 4rem;
+  font-size: 1.3rem;
+}
