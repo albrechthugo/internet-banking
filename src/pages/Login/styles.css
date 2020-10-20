@@ -53,6 +53,12 @@
   letter-spacing: -1px;
 }
 
+.login__form .login__form.content .login__form.description span:first-child {
+  margin-top: 2rem;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
 .login__form .login__form.content .login__form.description span {
   margin-top: 2rem;
   font-size: 1.28rem;
@@ -89,7 +95,7 @@
 
 .login__form .login__form.content a .login__form.submit-button:hover {
   background-color: var(--light-purple);
-  box-shadow: 0.1px 0.1px 3pxvar(--gray);
+  box-shadow: 0.1px 0.1px 3px var(--gray);
 }
 
 .login__form .login__form.content a .login__form.submit-button p {

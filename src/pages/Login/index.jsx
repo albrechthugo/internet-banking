@@ -18,7 +18,7 @@ const Login = () => {
 
               <div className="login__form description">
                 <p>
-                  <strong>Bem-vindo </strong>
+                  <span>Bem-vindo </span>
                   ao Internet <br/> Banking da Conta Simples
                 </p>
                 <span>
@@ -29,7 +29,7 @@ const Login = () => {
               <FormInput title="Endereço de e-mail" />
               <FormInput title="Senha" />
               
-              <Link to="/dashboard">
+              <Link to="/dashboard/">
                 <div className="login__form submit-button">
                   <p>Entrar</p>
                 </div>
