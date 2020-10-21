@@ -13,7 +13,7 @@ const RightSide = () => {
     api.get(`/transacoes/?id=${idEmpresa}`).then(response => {
       setTransactions(response.data);
     })
-  }, []);
+  }, [idEmpresa]);
 
   const lastTransactions = transactions.slice(0, 6)
 

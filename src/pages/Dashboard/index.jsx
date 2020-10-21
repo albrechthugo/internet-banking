@@ -30,7 +30,7 @@ const Dashboard = () => {
       setConta(data.dadosBancario.conta);
       setDigito(data.dadosBancario.digitoConta);
     })
-  }, []);
+  }, [idEmpresa]);
 
   return (
     <div id="dashboard__container">
@@ -54,7 +54,7 @@ const Dashboard = () => {
         <footer>
           <a 
             target="_blank"
-            rel="noopener norefeer"
+            rel="noopener noreferrer"
             href="https://contasimples.com/"
           >
             Política de Privacidade
@@ -62,7 +62,7 @@ const Dashboard = () => {
 
           <a 
             target="_blank"
-            rel="noopener norefeer"
+            rel="noopener noreferrer"
             href="https://contasimples.com/"
           >
             Saiba mais sobre segurança
@@ -70,7 +70,7 @@ const Dashboard = () => {
           
           <a 
             target="_blank"
-            rel="noopener norefeer"
+            rel="noopener noreferrer"
             href="https://contasimples.com/"
           >
             Trabalhe Conosco

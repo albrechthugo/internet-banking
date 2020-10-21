@@ -30,7 +30,7 @@ const Extract = () => {
       setConta(data.dadosBancario.conta);
       setDigito(data.dadosBancario.digitoConta);
     })
-  }, []);
+  }, [idEmpresa]);
 
   return (
     <div id="extract__container">

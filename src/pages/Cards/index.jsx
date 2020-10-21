@@ -30,7 +30,7 @@ const Cards = () => {
       setConta(data.dadosBancario.conta);
       setDigito(data.dadosBancario.digitoConta);
     })
-  }, []);
+  }, [idEmpresa]);
 
   return (
     <div id="cards__container">

@@ -12,7 +12,7 @@ const CardsDetail = () => {
     api.get(`/transacoes/?id=${idEmpresa}`).then(response => {
       setTransactions(response.data);
     })
-  }, []);
+  }, [idEmpresa]);
 
   const normalizedTransactions = transactions.reduce((acc, current) => {
     const currentFinalCartao = current.finalCartao

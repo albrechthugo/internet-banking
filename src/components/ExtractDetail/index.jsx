@@ -13,7 +13,7 @@ const ExtractDetail = () => {
     api.get(`/transacoes/?id=${idEmpresa}`).then(response => {
       setTransactions(response.data);
     })
-  }, []);
+  }, [idEmpresa]);
 
   return (
     <section className="extract__container a">
@@ -59,10 +59,10 @@ const ExtractDetail = () => {
                   {transaction.descricaoTransacao}
                 </td>
                 <td>
-                  {transaction.descricaoTransacao == 'Compra com cartão de crédito' ? 'Sim' : ''}
+                  {transaction.descricaoTransacao === 'Compra com cartão de crédito' ? 'Sim' : ''}
                 </td>
                 <td>
-                  {transaction.descricaoTransacao == 'Compra com cartão de crédito' ? '' : ''}
+                  {transaction.descricaoTransacao === 'Compra com cartão de crédito' ? '' : ''}
                 </td>
                 <td>
                   {transaction.valor}
